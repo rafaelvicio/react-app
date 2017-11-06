@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import StateInput from './StateInput';
+import ShoppingList from './ShoppingList';
 
 class HelloWord extends Component {
     constructor(props){
@@ -19,6 +20,7 @@ class HelloWord extends Component {
 
             <div className="myClass-from-react">
                 <StateInput />
+                <ShoppingList name="Mark" />
                 <h1 style={style}>Hello Word React</h1>
                 <h4>{ result === 2 * 2 ? 'TRUE' :  'FALSE'}</h4>
                 <span>{this.state.name}</span>
