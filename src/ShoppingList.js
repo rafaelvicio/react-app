@@ -1,18 +1,20 @@
 import React, { Component } from 'react';
 
 class ShoppingList extends Component {
-    render() {
+    constructor(props) {
+        super(props);
+        this.state = {
+          value: 'Ainda não clicou',
+        };
+      }
+    
+      render() {
         return (
-            <div className="shopping-list">
-                <h1>Shopping List</h1>
-                <ul>
-                    <li>Instagram</li>
-                    <li>Whatsapp</li>
-                    <li>Facebook</li>
-                </ul>
-            </div>
-        )
-    }
+          <button className="square" onClick={() => this.setState({value: 'Clicou aqui'})}>
+            {this.state.value}
+          </button>
+        );
+      }
 }
 
 export default ShoppingList
