@@ -19,6 +19,7 @@ class HelloWord extends Component {
         return (
 
             <div className="myClass-from-react">
+                <h2>It is {new Date().toLocaleTimeString()}.</h2>
                 <StateInput />
                 <ShoppingList name="Mark" />
                 <h1 style={style}>Hello Word React</h1>
