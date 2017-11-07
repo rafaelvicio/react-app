@@ -6,10 +6,22 @@ class HelloWord extends Component {
     constructor(props){
         super(props)
 
+        console.log(props, this.props)
+
         this.state = {
-            name: 'Rafael Augusto'
+            name: 'Rafael Augusto',
+            txt: this.props
         }
+
+        this.updateInputName = this.updateInputName.bind(this)
     }
+
+    updateInputName(e) {
+        return this.setState({
+            name: e.target.value
+        })
+    }
+
     render(){
         const result = 4;
         const style = {
@@ -19,6 +31,9 @@ class HelloWord extends Component {
         return (
 
             <div className="myClass-from-react">
+                <div>
+                    <input type="text" name="name" value={this.state.name} onChange={this.updateInputName} />
+                </div>
                 <h2>It is {new Date().toLocaleTimeString()}.</h2>
                 <StateInput />
                 <ShoppingList name="Mark" />
